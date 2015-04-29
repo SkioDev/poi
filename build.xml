@@ -1155,6 +1155,16 @@ under the License.
         </copy>
         <echo>Maven POMs are located in ${dist.dir}</echo>
         <echo>Use mvn-deploy.sh to deploy the artifacts in the remote repository</echo>
+        <copy file="maven/mvn-install.sh" todir="${dist.dir}">
+            <filterchain>
+                <replacetokens>
+                    <token key="VERSION" value="${version.id}"/>
+                    <token key="DSTAMP" value="${DSTAMP}"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <echo>Maven POMs are located in ${dist.dir}</echo>
+        <echo>Use mvn-install.sh to install the artifacts in the local repository</echo>
     </target>
 
     <target name="jar" depends="compile-all, compile-version" description="Creates jar files for distribution">
