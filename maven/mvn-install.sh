@@ -32,5 +32,5 @@ for artifactId in poi poi-scratchpad poi-ooxml poi-examples poi-ooxml-schemas po
 do
   mvn install:install-file -Dfile=$artifactId-$VERSION-$DSTAMP.jar \
   -DpomFile=$artifactId-$VERSION.pom \
-  -Dsources=$artifactId-$VERSION-sources-$DSTAMP.jar \
+  -Dsources=$artifactId-$VERSION-sources-$DSTAMP.jar
 done
