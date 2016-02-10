@@ -1413,8 +1413,17 @@ under the License.
                 </replacetokens>
             </filterchain>
         </copy>
+        <copy file="maven/mvn-install-local.sh" todir="${dist.dir}">
+            <filterchain>
+                <replacetokens>
+                    <token key="VERSION" value="${version.id}"/>
+                    <token key="DSTAMP" value="${DSTAMP}"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
         <echo>Maven POMs are located in ${dist.dir}</echo>
         <echo>Use mvn-deploy.sh to deploy the artifacts in the remote repository</echo>
+        <echo>Use mvn-install-local.sh to deploy the artifacts in the local repository</echo>
     </target>
 
     <target name="-manifest">
