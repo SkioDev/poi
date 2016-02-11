@@ -1,6 +1,10 @@
 
 /build
 /ooxml-lib
+/lib/*.zip
+/lib/*.jar
+/compile-lib/*.zip
+/compile-lib/*.jar
 
 
 ####################################################################
