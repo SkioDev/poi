@@ -1,6 +1,8 @@
 
 # Build artifacts
 build/
-compile-lib/
-lib/
+lib/*.jar
+lib/*.zip
+compile-lib/*.jar
+compile-lib/*.zip
 ooxml-lib/
